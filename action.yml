@@ -1,0 +1,13 @@
+name: "PoorlyDefinedBehavioyr/nyc-reporter"
+description: "Reminds reviewers to review pull requests they're tagged in"
+inputs:
+  GITHUB_TOKEN:
+    description: "The GITHUB_TOKEN secret"
+    required: true
+    default: ${{ github.token }}
+  DISCORD_WEBHOOK_URL:
+    description: "Discord web to post message"
+
+runs:
+  using: "node12"
+  main: "dist/index.js"
